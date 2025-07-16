@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_0</class>
+ <widget class="QWidget" name="Form_0">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1900</width>
+    <height>960</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> background-color:rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QComboBox" name="CB_port">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>790</y>
+     <width>140</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="CB_baudrate">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>860</y>
+     <width>140</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_connect">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>845</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 1.5px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>connect</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>880</y>
+     <width>360</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="maxLength">
+    <number>32765</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_a_X">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>110</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>aX : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_right">
+   <property name="geometry">
+    <rect>
+     <x>1300</x>
+     <y>0</y>
+     <width>600</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-style: solid;
+border-width: 1px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_disconnect">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>880</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 1.5px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>disconnect</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_SerialRead">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>800</y>
+     <width>360</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_BTscan">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>740</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>AT+BTscan</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_sendCMD">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>710</y>
+     <width>360</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Enter User CMD</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_sendCMD">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>660</y>
+     <width>360</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Hancom Gothic</family>
+     <pointsize>12</pointsize>
+     <stylestrategy>PreferDefault</stylestrategy>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sendCMD">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>750</y>
+     <width>200</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>send CMD</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_left">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>0</y>
+     <width>600</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-style: solid;
+border-width: 1px;
+border-color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_a_Y">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>aY : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_a_Z">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>aZ : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_yaw">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>yaw : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_pitch">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>pitch : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_roll">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>roll : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_none2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>230</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_RANGE">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>260</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>RANGE : 500m</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Diff_X">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>290</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>DiffX :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Diff_Z">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>350</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>DiffZ :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Diff_Y">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>320</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>DiffY :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_none3">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>200</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Baudrate">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>260</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Baudrate : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_cantime">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>20</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Can Time : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Longitude">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>110</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Longitude :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_gstime">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>50</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>GS Time : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Serial_connect">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>290</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Serial connect : False</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Satellites_Used">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>170</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Satellites Used : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Bluetooth_connect">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>320</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Bluetooth connect : False</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Bluetooth_ID">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>350</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Bluetooth ID : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Port">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Port : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Altitude">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>140</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Altitude : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Lattitue">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Lattitue : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_image_GPS">
+   <property name="geometry">
+    <rect>
+     <x>1380</x>
+     <y>500</y>
+     <width>440</width>
+     <height>440</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>CrossCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_none1">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ATZ">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>740</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>ATZ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_save_csv">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>590</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>SAVE CSV</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UARTCONFIG">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>690</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>UARTCONFIG</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ATH">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>690</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>ATH</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ATplus">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>640</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>+++</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ATD">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>640</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>ATD</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
