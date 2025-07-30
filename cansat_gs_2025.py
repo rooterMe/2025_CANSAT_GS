@@ -221,13 +221,13 @@ class WindowClass(QMainWindow, form_class):
                     self.IMU_data = copy.deepcopy(value)
                     value.insert(1,self.KST)
                     csv_data.append(value)
+                    self.show_IMU(self.IMU_data)
                 
                 # GPS
                 elif decoded[0]=='$':
                     value = ['GPS',*(decoded.split(',')[1:])]
                     self.show_GPS(value)
-                    if len(self.IMU_data)>0:
-                        self.show_IMU(self.IMU_data)
+                        
                 
                 # TIME
                 elif decoded[0]=='%':
@@ -300,9 +300,9 @@ class WindowClass(QMainWindow, form_class):
             self.label_yaw.setText(f"yaw : {value[1]}")
             self.label_pitch.setText(f"pitch : {value[2]}")
             self.label_roll.setText(f"roll : {value[3]}")
-            self.label_a_X.setText(f"aX : {value[4]}")
-            self.label_a_Y.setText(f"aY : {value[5]}")
-            self.label_a_Z.setText(f"aZ : {value[6]}")
+            self.label_a_X.setText(f"aX : {value[7]}")
+            self.label_a_Y.setText(f"aY : {value[8]}")
+            self.label_a_Z.setText(f"aZ : {value[9]}")
             self.label_Diff_X.setText(f"DiffX : {value[10]}")
             self.label_Diff_Y.setText(f"DiffY : {value[11]}")
             self.label_Diff_Z.setText(f"DiffZ : {value[12]}")
