@@ -78,7 +78,15 @@ class WindowClass(QMainWindow, form_class):
         self.pushButton_ATH.clicked.connect(self.ATH)
         self.pushButton_ATD.clicked.connect(self.ATD)
         self.pushButton_sendCMD.clicked.connect(self.chk_user_CMD)
+        self.pushButton_wingopen.clicked.connect(self.wing_open)
+        self.pushButton_turnleft.clicked.connect(self.turn_left)
+        self.pushButton_turnright.clicked.connect(self.turn_right)
+        self.pushButton_maintain.clicked.connect(self.maintain)
         self.pushButton_save_csv.clicked.connect(self.save_csv)
+
+        self.label_a_X.setText(f"")
+        self.label_a_Y.setText(f"")
+        self.label_a_Z.setText(f"")
 
         self.queue = Queue()
         
@@ -126,6 +134,9 @@ class WindowClass(QMainWindow, form_class):
         self.Lattitue = -1
         self.Longitude = -1
         self.Altitude = -1
+
+        self.left = -1
+        self.right = -1
 
         self.reconnect_cnt = 0
     
@@ -198,6 +209,18 @@ class WindowClass(QMainWindow, form_class):
             print(f"send : {cmd}")
 
         self.label_sendCMD.setText(f"send : {cmd}") 
+    
+    def wing_open(self):
+        self.send_user_CMD('WINGOPEN')
+    
+    def turn_left(self):
+        self.send_user_CMD('TURNLEFT')
+
+    def turn_right(self):
+        self.send_user_CMD('TURNRIGHT')
+
+    def maintain(self):
+        self.send_user_CMD('MAINTAIN')
 
     # 수신부
     def checkQueue(self):
@@ -241,6 +264,10 @@ class WindowClass(QMainWindow, form_class):
                     #csv_data.append([f"CAM{decoded[1]}", f"{self.KST}"])
 
                     self.decoding_image(str(data[2:].hex()), decoded[1])
+                
+                # MOTOR
+                elif decoded[0]=='!':
+                    self.show_MOTOR(decoded.split(',')[1:])
 
                 # COMMON
                 else:
@@ -255,6 +282,10 @@ class WindowClass(QMainWindow, form_class):
         self.lineEdit_SerialRead.setText(f"{data}, {self.KST}")
 
         sentence = data.split(' ')
+        if sentence[0] == 'WING':
+            self.label_wing.setText(f"WING : {sentence[1]}")
+            global csv_data
+            csv_data.append(['WING', self.KST, sentence[1]])
 
         if sentence[0] == 'CONNECT':
             self.label_Bluetooth_connect.setText("Bluetooth connect : True")
@@ -300,12 +331,12 @@ class WindowClass(QMainWindow, form_class):
             self.label_yaw.setText(f"yaw : {value[1]}")
             self.label_pitch.setText(f"pitch : {value[2]}")
             self.label_roll.setText(f"roll : {value[3]}")
-            self.label_a_X.setText(f"aX : {value[7]}")
-            self.label_a_Y.setText(f"aY : {value[8]}")
-            self.label_a_Z.setText(f"aZ : {value[9]}")
-            self.label_Diff_X.setText(f"DiffX : {value[10]}")
-            self.label_Diff_Y.setText(f"DiffY : {value[11]}")
-            self.label_Diff_Z.setText(f"DiffZ : {value[12]}")
+            self.label_v_X.setText(f"vX : {value[4]}")
+            self.label_v_Y.setText(f"vY : {value[5]}")
+            self.label_v_Z.setText(f"vZ : {value[6]}")
+            self.label_Diff_X.setText(f"DiffX : {value[7]}")
+            self.label_Diff_Y.setText(f"DiffY : {value[8]}")
+            self.label_Diff_Z.setText(f"DiffZ : {value[9]}")
 
         except Exception as e:
             print(f"IMU error: {e}")
@@ -361,6 +392,43 @@ class WindowClass(QMainWindow, form_class):
         scaled_q_image = QPixmap.fromImage(q_image).scaled(440, 440, Qt.KeepAspectRatio)
         self.label_image_GPS.setPixmap(scaled_q_image)
 
+    def show_MOTOR(self, value):
+        try:
+            self.label_motor_left.setText(f"Motor Left : {value[0]}")
+            self.label_motor_right.setText(f"Motor Right : {value[1]}")
+
+            if value[0] == 'MOTOR':
+                if value[1] == 'Left':
+                    if value[2] == 'UP':
+                        self.left += 1
+                    elif value[2] == 'DOWN':
+                        self.left -= 1
+                elif value[1] == 'Right':
+                    if value[2] == 'UP':
+                        self.right += 1
+                    elif value[2] == 'DOWN':
+                        self.right -= 1
+            
+            if self.left == -1:
+                self.label_motor_left.setText("Left : Down")
+            elif self.left == 0:
+                self.label_motor_left.setText("Left : Base")
+            elif self.left == 1:
+                self.label_motor_left.setText("Left : Up")
+            
+            if self.right == -1:
+                self.label_motor_right.setText("Right : Down")
+            elif self.right == 0:
+                self.label_motor_right.setText("Right : Base")
+            elif self.right == 1:
+                self.label_motor_right.setText("Right : Up")
+        
+            global csv_data
+            csv_data.append(["MOTOR", f"{self.KST}", f"{value[1]}", value[2], self.left, self.right])
+
+        except Exception as e:
+            print(f"MOTOR error: {e}")
+
     def decoding_image(self, cam_data, cam_num):
         try:
             print("img")
@@ -375,6 +443,7 @@ class WindowClass(QMainWindow, form_class):
 
             global csv_data
             csv_data.append([f"CAM{cam_num}", f"{self.KST}", f"{filename}"])
+            
         except Exception as e:
             print(f"Error decoding data: {e}")
     
@@ -400,7 +469,7 @@ class WindowClass(QMainWindow, form_class):
     # csv 파일 저장
     def save_csv(self):
         global csv_data
-        print("save_csv")
+        
         now = str(dt.datetime.now())[11:19].replace(':','-')
         
         # 파일 저장
@@ -409,6 +478,8 @@ class WindowClass(QMainWindow, form_class):
             writer.writerow(['sensor', 'time', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
             for row in csv_data:
                 writer.writerow(row)
+        
+        print("save_csv")
 
     # parani 명령어 단축키
     def BT_scan(self):

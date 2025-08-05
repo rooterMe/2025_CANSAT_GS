@@ -104,7 +104,7 @@ border-color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>110</y>
+     <y>200</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -301,7 +301,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>140</y>
+     <y>230</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -326,7 +326,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>170</y>
+     <y>260</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -426,7 +426,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>230</y>
+     <y>320</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -451,7 +451,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>260</y>
+     <y>350</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -476,7 +476,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>290</y>
+     <y>380</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -501,7 +501,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>350</y>
+     <y>440</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -526,7 +526,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>320</y>
+     <y>410</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -873,7 +873,7 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>200</y>
+     <y>290</y>
      <width>150</width>
      <height>30</height>
     </rect>
@@ -1025,6 +1025,238 @@ border-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>AT+BTINQ</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_v_X">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>110</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>vX : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_v_Y">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>vY : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_v_Z">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>vZ : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_wing">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>380</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>WING : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_motor_left">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>410</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Left : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_motor_right">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>440</y>
+     <width>270</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>SansSerif</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Right :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_wingopen">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>540</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Wing</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_turnleft">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>540</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Left</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_maintain">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>540</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Maintain</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_turnright">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>540</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color : rgb(255, 255, 255);
+border-style: solid;
+border-width: 3px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Right</string>
    </property>
   </widget>
  </widget>
